@@ -5,16 +5,17 @@ and false otherwise */
 /* an anagram is a word or phrase formed by rearranging the letters of a different word or phrase
 typically using the original letters exctly once */
 
-var s = "anagram"
-var t = "nagrams"
+var s = "tara";
+var t = "rat";
 
 var isAnagram = function(s, t) {
-    if (s.length != t.length)
+
+    if (s.length != t.length) return false;
+    
+    s = s.split("").sort().join("");
+    t = t.split("").sort().join("");
+    if (s === t) return true;
     return false;
-
-    var small = s.split('');
-    var tall = t.split('');
-    else {
-
     }
-}
+
+    console.log(isAnagram(s, t));
