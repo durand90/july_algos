@@ -21,6 +21,8 @@ var s = "a man, a plan, a canal: Panama";
 var isPalindrone = function(s) {
 
     s = s.toLowerCase().replace(/[\W]/g, "").split("");
-    return s.join("") === s.reverse().join("")? true : false;
+    if (s.join("") === s.reverse().join(""))
+        return true;
+        return false;
 }
 console.log(isPalindrone(s));
